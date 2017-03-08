@@ -1,0 +1,40 @@
+// Based on https://github.com/SonarSource/sonar-examples/tree/master/projects/languages/java/gradle/java-gradle-simple
+
+plugins {
+  id "java"
+  id "jacoco"
+  id "org.sonarqube" version "2.2"
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectName", "Sonar Test"
+        property "sonar.projectKey", "io.github.oliviernt:sonar-test"
+        property "sonar.jacoco.reportPath", "${project.buildDir}/jacoco/test.exec"
+        property "sonar.host.url", "https://sonarqube.com"
+    }
+}
+
+allprojects {
+  group = "io.github.oliviernt"
+  version = "0.1.0-SNAPSHOT"
+}
+
+test {
+  ignoreFailures = true
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+}
+
+repositories {
+  repositories {
+    maven {
+      url "http://repo1.maven.org/maven2/"
+    }
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+}
