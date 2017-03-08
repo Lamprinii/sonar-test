@@ -5,7 +5,7 @@ import java.util.logging.Logger;
 
 public class NullPointerExceptions {
 
-    private static final Logger LOGGER = LogManager.getLogManager().getLogger(ConditionsAlwaysEvaluatesToTrue.class.getCanonicalName());
+    private static final Logger LOGGER = LogManager.getLogManager().getLogger(NullPointerExceptions.class.getCanonicalName());
 
 
     public void codeThatDoesNotThrowANullPointerException() {
