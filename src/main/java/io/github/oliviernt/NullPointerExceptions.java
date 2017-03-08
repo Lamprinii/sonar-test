@@ -1,5 +1,6 @@
 package io.github.oliviernt;
 
+import java.util.Objects;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
@@ -16,6 +17,21 @@ public class NullPointerExceptions {
         }
 
         Assertions.notNull(string);
+
+        string = string.toUpperCase();
+
+        LOGGER.info(string);
+    }
+
+
+    public void codeThatDoesNotThrowANullPointerExceptionWithObjects() {
+
+        String string = null;
+        if (System.currentTimeMillis() % 2 == 0) {
+            string = "% 2 == 0";
+        }
+
+        Objects.requireNonNull(string);
 
         string = string.toUpperCase();
 

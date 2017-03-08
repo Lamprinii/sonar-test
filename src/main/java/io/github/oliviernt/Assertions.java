@@ -6,10 +6,12 @@ public final class Assertions {
         // private utility constructor
     }
 
-    public static void notNull(Object obj) {
+    public static <T> T notNull(T obj) {
 
         if (obj == null) {
             throw new IllegalArgumentException("Object must no be null!");
         }
+
+        return obj;
     }
 }
