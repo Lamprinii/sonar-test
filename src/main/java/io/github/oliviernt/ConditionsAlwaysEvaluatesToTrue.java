@@ -9,16 +9,6 @@ public class ConditionsAlwaysEvaluatesToTrue {
 
 
     public void thisIsAlwaysTrue() {
-
-        if (System.currentTimeMillis() % 2 == 0) {
-            message("% 2 == 0");
-        } else {
-            message("% 2 == 1");
-        }
-
-    }
-
-    public static void message(String msg) {
-        LOGGER.info(msg);
+        //TODO: add code that always evaluates to true
     }
 }
