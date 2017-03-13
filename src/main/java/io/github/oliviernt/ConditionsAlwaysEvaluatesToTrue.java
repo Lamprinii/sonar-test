@@ -15,9 +15,9 @@ public class ConditionsAlwaysEvaluatesToTrue {
         String strB = getString();
 
         if (!Objects.equals(strA, strB)) {
-            if (strA == null && strB != null) {
+            if (strA == null && strB != null) { // not a false positive as the Objects.equals check asserts that if strA is null, strB is not.
                 LOGGER.info("strA is null but strB is not");
-            } else if (strA != null && strB == null) {
+            } else if (strA != null && strB == null) { // not a false positive as Object.equals and the previous if conditions already asserted that strA is not null
                 LOGGER.info("strA is not null but strB is");
             } else {
                 LOGGER.info("neither strA nor strB are null");
