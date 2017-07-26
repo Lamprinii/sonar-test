@@ -14,4 +14,11 @@ public final class Assertions {
 
         return obj;
     }
+
+    public static void state(boolean present) {
+
+        if (!present) {
+            throw new IllegalStateException("State must be true");
+        }
+    }
 }
