@@ -8,10 +8,8 @@ plugins {
 
 sonarqube {
     properties {
-        property "sonar.projectName", "Sonar Test"
-        property "sonar.projectKey", "io.github.oliviernt:sonar-test"
-        property "sonar.jacoco.reportPath", "${project.buildDir}/jacoco/test.exec"
-        property "sonar.host.url", "https://sonarqube.com"
+        property "sonar.projectName", "Asfalis_Prograqmmatismos"
+        property "sonar.projectKey", "Asfalis_Programmatismos"
     }
 }
 
